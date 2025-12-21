@@ -81,16 +81,31 @@ docker run -d --env-file .env rexbots-save-content
 *   `/logout` - Logout from your account
 *   `/batch` - Bulk save messages
 *   `/cancel` - Cancel ongoing batch process
-*   `/set_caption` - Set a custom caption
-*   `/set_thumb` - Set a custom thumbnail
+*   `/settings` - Open settings menu
 *   `/myplan` - Check your current plan status
 *   `/premium` - View premium plan details
+
+#### Customization & Settings
+*   `/set_caption` - Set a custom caption
+*   `/see_caption` - View your custom caption
+*   `/del_caption` - Delete your custom caption
+*   `/set_thumb` - Set a custom thumbnail (reply to photo)
+*   `/view_thumb` - View your custom thumbnail
+*   `/del_thumb` - Delete your custom thumbnail
+*   `/thumb_mode` - Toggle thumbnail mode (Custom/Default)
+*   `/set_del_word` - Set words to auto-delete
+*   `/rem_del_word` - Remove words from auto-delete list
+*   `/set_repl_word` - Set words to auto-replace
+*   `/rem_repl_word` - Remove replacement word pair
+*   `/setchat` - Set dump chat ID
 
 ### Admin Commands
 *   `/broadcast` - Broadcast a message to all users
 *   `/ban` / `/unban` - Manage user access
 *   `/add_premium` / `/remove_premium` - Manage premium users
 *   `/users` - View total user count
+*   `/premium_users` - View active premium users
+*   `/set_dump` - Set dump chat for a user
 *   `/dblink` - Get database connection string
 
 ## 🤝 Contributors
@@ -99,7 +114,7 @@ A huge thanks to the developers who made this project possible:
 
 <div align="center">
 
-| [**ABHI**](https://t.me/about_zani/143) | [**Abhinav**](https://t.me/adityaabhinav) | [**Bharat**](https://t.me/Bharath_boy) | [**Master**](https://t.me/V_Sbotmaker) |
+| [**Abhi**](https://t.me/about_zani/143) | [**Abhinav**](https://t.me/adityaabhinav) | [**Bharat**](https://t.me/Bharath_boy) | [**Master**](https://t.me/V_Sbotmaker) |
 | :---: | :---: | :---: | :---: |
 | Owner | Developer | Developer | Developer |
 
