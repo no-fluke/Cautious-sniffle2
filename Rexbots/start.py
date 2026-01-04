@@ -52,6 +52,33 @@ logger = LOGGER(__name__)
 
 class batch_temp(object):
     IS_BATCH = {}
+    # ======================
+# Anti-ban & temp-file helpers
+# ======================
+
+from config import DOWNLOAD_DELAY
+
+async def anti_ban_delay(msg):
+    try:
+        if msg:
+            await msg.edit(
+                f"⏳ Waiting {DOWNLOAD_DELAY} seconds before download (anti-ban)"
+            )
+    except:
+        pass
+    await asyncio.sleep(DOWNLOAD_DELAY)
+
+
+async def wait_for_final_file(folder, timeout=30):
+    start = time.time()
+    while time.time() - start < timeout:
+        for f in os.listdir(folder):
+            # ignore temp/partial files
+            if not f.endswith(".temp") and not f.endswith(".part"):
+                return os.path.join(folder, f)
+        await asyncio.sleep(0.5)
+    raise Exception("Download not finalized")
+    
 
 # -------------------
 # Supported Telegram Reactions
